@@ -8,7 +8,7 @@ void enque()
 { 
 //isFULL condition
 if(front==-1 && rear==MAX-1){
-printf("Q is full\n");
+printf("Queue is full\n");
 }
 else
 {
@@ -25,7 +25,7 @@ void deque()
     }
     else{
     front+=1;
-    printf("DQ element:%d\n",queue[front]);
+    printf("Deque element:%d\n",queue[front]);
     queue[front]='\0';
     printf("front is now %d",front);
     }
@@ -92,3 +92,4 @@ int main(){
     }
     return 0;
 }
+
