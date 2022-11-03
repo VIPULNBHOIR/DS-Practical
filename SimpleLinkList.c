@@ -28,6 +28,7 @@ void get_data(struct node *head)
 if(head == 0)
 {
 printf("link list is empty");
+    
 }
 struct node *ptr=0;
 ptr=head;
@@ -41,18 +42,13 @@ ptr=ptr->link;
 //delete data from begining
 struct node *delete_from_Beg(struct node *head)
 {
-if(head==0){
-printf("link list is empty");    
-}
-else{
 struct node *temp;
 temp=head;
 head=head->link;
-printf("deleted data:%d\n",temp->data);
+printf("%d",temp->data);
 free(temp);
 printf("data successfully deleted");
-return head;                         //.....returning updated head pointer
-}
+return head;        //.....returning updated head pointer
 }
 
 
@@ -66,7 +62,6 @@ prev=temp;
 temp=temp->link;
 }
 prev->link=0;
-printf("deleted data:%d\n",temp->data);
 free(temp);
 printf("data successfully deleted");
 }
@@ -102,10 +97,8 @@ int value;
 
 struct node *head=malloc(sizeof(struct node));
 struct node *ptr=head;
-head->data=50;
-head->link=0;
 
-printf("ENTER:\n1.insert at END\n2.insert at BEG.\n3.Print data\n4.Delete from END\n5.Delete from BEG.\n6.Count NO. of nodes\n ");
+printf("to adding data press (1). to count nodes press (3). to printing data press (2). to exit() press (0)");
 int x=1;
 
 while(x!=0)
@@ -142,16 +135,7 @@ case 5:
 head=delete_from_Beg(head);
 break;
 
-case 6:
-No_nodes(head);
-break;
-
-default:
-printf("Enter correct choice please !!");
-break;
-
 }
 }
 return 0;
 }
-
